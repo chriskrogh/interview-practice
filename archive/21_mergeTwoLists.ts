@@ -1,16 +1,9 @@
+import { ListNode } from 'utils/ListNode';
+
 /**
  * Merge two sorted linked lists and return it as a sorted list.
  * The list should be made by splicing together the nodes of the first two lists.
  */
-
-class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
 
 function mergeTwoLists(
   l1: ListNode | null,
@@ -36,15 +29,6 @@ function mergeTwoLists(
   return head.next;
 }
 
-const printList = (l: ListNode | null) => {
-  let res = '';
-  while (l) {
-    res += l.val + (l.next ? ' , ' : '');
-    l = l.next;
-  }
-  console.log(res);
-};
-
 const l1Three = new ListNode(3);
 const l1Two = new ListNode(2, l1Three);
 const l1One = new ListNode(1, l1Two);
@@ -53,6 +37,6 @@ const l2Three = new ListNode(3);
 const l2Two = new ListNode(2, l2Three);
 const l2One = new ListNode(1, l2Two);
 
-printList(mergeTwoLists(l1One, l2One));
+mergeTwoLists(l1One, l2One)?.print();
 // printList(l1One);
 // printList(l2One);
