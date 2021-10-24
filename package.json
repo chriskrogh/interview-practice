@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_PATH=src tsnd --inspect=9230 --files --respawn src/index.ts"
+    "dev": "NODE_PATH=src NODE_OPTIONS=\"--inspect=9230\" ts-node src/index.ts"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.1.0",
@@ -14,7 +14,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "prettier": "^2.4.1",
-    "ts-node-dev": "^1.1.8",
+    "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   }
 }
