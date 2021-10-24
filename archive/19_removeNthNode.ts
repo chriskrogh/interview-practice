@@ -39,3 +39,10 @@ const Two = new ListNode(2, Three);
 const One = new ListNode(1, Two);
 
 removeNthFromEnd(One, 2)?.print();
+
+/**
+ * One pass solution is to use a slow ptr and a fast ptr
+ * * increment the fast prt by n initially.
+ * * increment both till the end
+ * * delete slow
+ */
