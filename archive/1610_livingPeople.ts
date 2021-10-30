@@ -1,3 +1,10 @@
+/**
+ * Given an array of birt years and death years over the interval
+ * [1900, 2000], return the year with the most people alive
+ * @param arr [birthYear, deathYear][]
+ * @returns year with most people alive
+ */
+
 const livingPeople = (arr: number[][]): number => {
   const m: Record<number, number> = {};
   Array(101)
